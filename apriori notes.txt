@@ -1,0 +1,39 @@
+Assocation Rule Learning
+apriori algorithm
+1) Support
+2) Confidence
+3) Lift
+4) Conviction
+
+Support - Support for an item X is the proportion of transaction in the database in which item X appears.
+          It Signifies the popularity of an item set, so support of X equals no. of transactions in which
+          X appears divided total no of transactions.
+          for Eg -  
+
+support(onions) -                           no. of transactions having onions       |                                  no. of transactions having Y
+                                                    ------------------------------------------  |  support (Y)  =     ------------------------------------
+                                                          total transactions                    |                            total no. transactions
+            Support Threshold
+
+
+Confidence -  Conf(X -> Y) = Support(X U Y)
+                           ---------------          ,      p(Y|X) - conditional probability
+                               supp(X)
+                        
+          it signifies the likelihood of purchasing y if x is purchased. {onion, Potato} -> {Burger}
+
+
+Lift - 
+
+lift( X --> Y)  =           support( X U Y)
+                        ----------------------------
+                              supp(X) * supp(Y)
+
+if  lift > 1 :    item y will be purchased with item X ;  else if lift < 1: item y will not be purchased
+
+
+Conviction 
+conviction(X-> Y)  =   1 - supp(Y)
+                     -------------------
+                     1 - conf(X-> Y)
+
